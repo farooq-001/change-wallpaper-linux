@@ -24,7 +24,7 @@ import time
 
 def change_wallpaper():
     os.environ['DISPLAY'] = ':0'
-    os.environ['DBUS_SESSION_BUS_ADDRESS'] = 'unix:path=/run/user/\$(id -u)/bus'
+    os.environ['DBUS_SESSION_BUS_ADDRESS'] = 'unix:path=/run/user/1000/bus'  # Replace 1000 with your user ID
     WALLPAPERS_DIR = "/etc/change-wallpaper-linux/Wlp"
     wallpapers = os.listdir(WALLPAPERS_DIR)
     wallpaper = random.choice(wallpapers)
@@ -40,6 +40,7 @@ schedule.every(1).minutes.do(change_wallpaper)
 while True:
     schedule.run_pending()
     time.sleep(1)
+
 EOF
 
 # Create systemd service file
@@ -49,7 +50,7 @@ Description=Change Wallpaper Service
 After=network.target
 
 [Service]
-Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/\$(id -u)/bus"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
 ExecStart=/usr/bin/python3 /etc/change-wallpaper-linux/change-wallpaper.py
 Restart=always
 
