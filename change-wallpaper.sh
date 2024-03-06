@@ -44,7 +44,7 @@ while True:
 EOF
 
 # Create systemd service file
-sudo tee /home/systemd/system/change-wallpaper.service <<EOF
+sudo tee /etc/systemd/system/change-wallpaper.service <<EOF
 [Unit]
 Description=Change Wallpaper Service
 After=network.target
