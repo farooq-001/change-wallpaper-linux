@@ -11,8 +11,8 @@ sudo pip install schedule
 
 # Unzip and move wallpapers
 unzip Wlp.zp.zip && rm -rf Wlp.zp.zip
-sudo mkdir -p /etc/change-wallpaper-linux
-sudo mv Wlp /etc/change-wallpaper-linux/
+sudo mkdir -p /home/change-wallpaper-linux
+sudo mv Wlp /home/change-wallpaper-linux/
 
 # Create and populate Python script
 sudo tee /etc/change-wallpaper-linux/change-wallpaper.py <<EOF
@@ -25,7 +25,7 @@ import time
 def change_wallpaper():
     os.environ['DISPLAY'] = ':0'
     os.environ['DBUS_SESSION_BUS_ADDRESS'] = 'unix:path=/run/user/1000/bus'  # Replace 1000 with your user ID
-    WALLPAPERS_DIR = "/etc/change-wallpaper-linux/Wlp"
+    WALLPAPERS_DIR = "/home/change-wallpaper-linux/Wlp"
     wallpapers = os.listdir(WALLPAPERS_DIR)
     wallpaper = random.choice(wallpapers)
     wallpaper_path = os.path.join(WALLPAPERS_DIR, wallpaper)
@@ -51,7 +51,7 @@ After=network.target
 
 [Service]
 Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
-ExecStart=/usr/bin/python3 /etc/change-wallpaper-linux/change-wallpaper.py
+ExecStart=/usr/bin/python3 /home/change-wallpaper-linux/change-wallpaper.py
 Restart=always
 
 [Install]
