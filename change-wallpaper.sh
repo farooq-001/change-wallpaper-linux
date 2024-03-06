@@ -15,7 +15,7 @@ sudo mkdir -p /home/change-wallpaper-linux
 sudo mv Wlp /home/change-wallpaper-linux/
 
 # Create and populate Python script
-sudo tee /home/change-wallpaper-linux/change-wallpaper.py <<EOF
+sudo tee /etc/change-wallpaper-linux/change-wallpaper.py <<EOF
 import os
 import random
 import subprocess
