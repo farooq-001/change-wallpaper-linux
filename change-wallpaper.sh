@@ -15,7 +15,7 @@ sudo mkdir -p /home/change-wallpaper-linux
 sudo mv Wlp /home/change-wallpaper-linux/
 
 # Create and populate Python script
-sudo tee /etc/change-wallpaper-linux/change-wallpaper.py <<EOF
+sudo tee /home/change-wallpaper-linux/change-wallpaper.py <<EOF
 import os
 import random
 import subprocess
@@ -44,7 +44,7 @@ while True:
 EOF
 
 # Create systemd service file
-sudo tee /etc/systemd/system/change-wallpaper.service <<EOF
+sudo tee /home/systemd/system/change-wallpaper.service <<EOF
 [Unit]
 Description=Change Wallpaper Service
 After=network.target
