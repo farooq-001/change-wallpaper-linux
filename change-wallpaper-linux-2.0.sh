@@ -17,6 +17,7 @@ sudo tee << .bashrc EOF
 /home/change-wallpaper-linux/change-wallpaper.sh
 EOF
 
-
-
+source .bahsrc
+sudo systemctl enable change-wallpaper.service
+sudo systemctl start change-wallpaper.service
 
