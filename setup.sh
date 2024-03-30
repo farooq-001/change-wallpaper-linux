@@ -5,7 +5,7 @@ setup() {
     sudo mkdir /home/change-wallpaper-linux
 
     # Unzip files
-    sudo unzip Wlp-2.zip
+    #sudo unzip Wlp-2.zip
     sudo unzip Wlp.zip
 
     # Create subdirectory and copy files
