@@ -13,7 +13,7 @@ setup() {
     sudo mv Wlp /home/change-wallpaper-linux/
 
     # Copy python script and systemd service file
-    sudo scp -r change-wallpaper.sh  /home/change-wallpaper-linux/change-wallpaper.sh
+    sudo cp -r change-wallpaper.sh  /home/change-wallpaper-linux/change-wallpaper.sh
     sudo cp -r change-wallpaper.py   /home/change-wallpaper-linux/change-wallpaper.py
     sudo cp -r change-wallpaper.service /etc/systemd/system/change-wallpaper.service
 
