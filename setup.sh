@@ -6,7 +6,7 @@ setup() {
 
     # Unzip files
     sudo unzip Wlp.zip
-    #sudo unzip Wlp-2.zip
+    sudo unzip Wlp-2.zip
     
 
     # Create subdirectory and copy files
