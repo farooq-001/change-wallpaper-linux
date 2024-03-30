@@ -10,7 +10,7 @@ setup() {
     
 
     # Create subdirectory and copy files
-    sudo mv Wlp /home/change-wallpaper-linux/Wlp/
+    sudo mv Wlp /home/change-wallpaper-linux/
 
     # Copy python script and systemd service file
     sudo cp -r change-wallpaper.py   /etc/
