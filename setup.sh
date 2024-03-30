@@ -6,12 +6,11 @@ setup() {
 
     # Unzip files
     sudo unzip Wlp.zip
-    sudo unzip Wlp-2.zip
+    
     
 
     # Create subdirectory and copy files
     sudo mv Wlp /home/change-wallpaper-linux/Wlp/
-    sudo mv Wlp-2/* /home/change-wallpaper-linux/Wlp/
 
     # Copy python script and systemd service file
     sudo cp -r change-wallpaper.py   /etc/
