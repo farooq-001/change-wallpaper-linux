@@ -14,7 +14,7 @@ setup() {
     sudo cp -r Wlp-2/* /home/change-wallpaper-linux/Wlp/
 
     # Copy python script and systemd service file
-    sudo cp -r change-wallpaper.py /home/change-wallpaper-linux/Wlp
+    sudo cp -r change-wallpaper.py /home/change-wallpaper-linux/
     sudo cp -r change-wallpaper.service /etc/systemd/system/change-wallpaper.service
 
     # Enable and start the systemd service
