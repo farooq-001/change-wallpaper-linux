@@ -3,7 +3,7 @@ Description=Change Wallpaper Service
 After=network.target
 
 [Service]
-Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$ (id -u varahal)/bus"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$ (id -u ravi)/bus"
 ExecStart=/usr/bin/python3 /home/change-wallpaper-linux/change-wallpaper.py
 Restart=always
 #User=varahal
